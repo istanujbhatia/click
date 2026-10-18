@@ -9,7 +9,7 @@ import { assistantMessageFrom, browserStorage, createConversationStore, createSi
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
     set(k, v) { try { localStorage.setItem(k, v); } catch { /* storage unavailable */ } },
   };
-  const clickConfig = window.CLICK_CONFIG || {};
+  const clickConfig = window.CLICK_CONFIG || { social: { x: "", telegram: "", github: "" } };
   const socialConfig = clickConfig.social || {};
   for (const node of document.querySelectorAll("[data-social]")) {
     const key = node.dataset.social;
