@@ -9,5 +9,4 @@ await build({
 	platform: "node",
 	format: "esm",
 	outfile: "api/_dist/handler.js",
-	packages: "external",
 });
